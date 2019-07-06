@@ -9,6 +9,6 @@ x_ = sm.add_constant(x1)
 smm = sm.OLS(y1, x_)
 res = smm.fit()
 print(res.params)
-d = 652
-s = 25000
-print(res.params[0] + res.params[1]*d + res.params[2]*s)
+d = 170
+s = 13699
+print(418.90199934849494 + 1.0900290166433344*d -0.013793619884638932*s)

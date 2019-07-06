@@ -267,3 +267,11 @@ color: rgb(10,10,10);
 text-decoration: none;
 user-select: none;
 }
+
+.content{
+position:fixed;
+background:#EBF3FA;
+top:50px;
+right:50px;
+width: 50%;
+}
