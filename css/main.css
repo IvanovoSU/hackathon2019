@@ -36,86 +36,86 @@
 
 /* From Top */
 
-.from-top:before,
-.from-top:after {
+.b-from-top:before,
+.b-from-top:after {
     left: 0;
     height: 0;
     width: 100%;
 }
 
-.from-top:before {
+.b-from-top:before {
     bottom: 0;
     border: 1px solid var(--inv);
     border-top: 0;
     border-bottom: 0;
 }
 
-.from-top:after {
+.b-from-top:after {
     top: 0;
     height: 0;
 }
 
-.from-top:hover:before,
-.from-top:hover:after {
+.b-from-top:hover:before,
+.b-from-top:hover:after {
     height: 100%;
 }
 
 
 /* From Left */
 
-.from-left:before,
-.from-left:after {
+.b-from-left:before,
+.b-from-left:after {
     top: 0;
     width: 0;
     height: 100%;
 }
 
-.from-left:before {
+.b-from-left:before {
     right: 0;
     border: 1px solid var(--inv);
     border-left: 0;
     border-right: 0;
 }
 
-.from-left:after {
+.b-from-left:after {
     left: 0;
 }
 
-.from-left:hover:before,
-.from-left:hover:after {
+.b-from-left:hover:before,
+.b-from-left:hover:after {
     width: 100%;
 }
 
 
 /* From Right */
 
-.from-right:before,
-.from-right:after {
+.b-from-right:before,
+.b-from-right:after {
     top: 0;
     width: 0;
     height: 100%;
 }
 
-.from-right:before {
+.b-from-right:before {
     left: 0;
     border: 1px solid var(--inv);
     border-left: 0;
     border-right: 0;
 }
 
-.from-right:after {
+.b-from-right:after {
     right: 0;
 }
 
-.from-right:hover:before,
-.from-right:hover:after {
+.b-from-right:hover:before,
+.b-from-right:hover:after {
     width: 100%;
 }
 
 
 /* From Middle */
 
-.from-middle:before {
+.b-from-middle:before {
     top: 0;
     left: 50%;
     height: 100%;
@@ -125,7 +125,7 @@
     border-right: 0;
 }
 
-.from-middle:after {
+.b-from-middle:after {
     bottom: 0;
     left: 0;
     height: 0;
@@ -133,12 +133,12 @@
     background: var(--inv);
 }
 
-.from-middle:hover:before {
+.b-from-middle:hover:before {
     left: 0;
     width: 100%;
 }
 
-.from-middle:hover:after {
+.b-from-middle:hover:after {
     top: 0;
     height: 100%;
 }
@@ -146,50 +146,53 @@
 
 /* From Bottom */
 
-.from-bottom:before,
-.from-bottom:after {
+.b-from-bottom:before,
+.b-from-bottom:after {
     left: 0;
     height: 0;
     width: 100%;
 }
 
-.from-bottom:before {
+.b-from-bottom:before {
     top: 0;
     border: 1px solid var(--inv);
     border-top: 0;
     border-bottom: 0;
 }
 
-.from-bottom:after {
+.b-from-bottom:after {
     bottom: 0;
     height: 0;
 }
 
-.from-bottom:hover:before,
-.from-bottom:hover:after {
+.b-from-bottom:hover:before,
+.b-from-bottom:hover:after {
     height: 100%;
 }
 
 
-/* ~~~~~~~~~~~~ GLOBAL SETTINGS ~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~ BUTTONS GLOBAL SETTINGS ~~~~~~~~~~~~ */
 
 *,
 *:before,
 *:after {
     box-sizing: border-box;
 }
-
-body {
-    overflow: hidden;
+.container {
     --def: #000;
     --inv: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
     height: 100vh;
     width: 100%;
-    background: #1f75fe;
+    flex-direction: row;
+
+}
+body {
+    overflow: auto;
+    background: #228bcc;
+
 }
 
 html {
@@ -197,10 +200,70 @@ html {
     font-family: 'Verdana';
 }
 
-div {
-    margin-bottom: 3rem;
+a {
+color: rgb(10,10,10);
+text-decoration: none;
+user-select: none;
 }
 
-div:last-child {
-    margin-bottom: 0;
+.list {
+    margin-bottom: 8px;
+    padding:0;
+    list-style: none;
+    counter-reset: li;
+    max-width: 35%;
+}    
+.list li {
+    position: relative;
+    border: 2px solid #337AB7;
+    background: #EBF3FA;
+    padding:16px 20px 16px 28px;
+    margin:12px 0 12px 40px;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+
+    
+}
+.list li:hover {
+    background: #FFF;
+}
+.list li:before {
+    line-height: 32px;
+    position: absolute;
+    top: 4px;
+    left:-40px;
+    width:40px;
+    text-align:center;
+    font-size: 16px;
+    font-weight: bold;
+    color: #FFF;
+    background: #1265ac;
+    counter-increment: li;
+    content: counter(li);
+    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+}
+.list li:hover:before {
+    width:46px;
+}
+.list li:after {
+    position: absolute;
+    left: 0;
+    top: 4px;
+    content: "";
+    height: 0;
+    width: 0;
+    border: 16px solid transparent;
+    border-left-color: #1265ac;
+    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.2s
+}
+.list li:hover:after {
+    margin-left: 6px;
+}
+
+.list li > a {
+color: rgb(10,10,10);
+text-decoration: none;
+user-select: none;
 }
