@@ -17,7 +17,7 @@ for line in f:
         p3 = int(l[-1])
         if not (k in d):
             d[k] = []
-        d[k].append(([p1, p3], p2))
+        d[k].append(([p2, p3], p1))
     except Exception:
         print(l)
 
