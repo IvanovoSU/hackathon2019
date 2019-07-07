@@ -19,13 +19,13 @@ function drawdiag(region, elem){
     var el = document.getElementById('name');
     el.innerText = key;
     var el = document.getElementById('trend');
-    el.innerText = 'Потребность кадров через 5 лет: ' + d;
+    el.innerText = d;
     var el = document.getElementById('salary');
-    el.innerText = 'Ожидаемая заработная плата: ' + s;
+    el.innerText = s;
     var el = document.getElementById('prof_cur');
-    el.innerText = 'Необходимый преподовательский состав по текущему набору: ' + Math.ceil(p1/20);
+    el.innerText = Math.ceil(p1/20);
     var el = document.getElementById('prof_rec');
-    el.innerText = 'Необходимый преподовательский состав по рекомендуемому набору: ' + Math.ceil(p2/20);
+    el.innerText = Math.ceil(p2/20);
     var ctx = chart.getContext('2d');
     if (myChart != undefined) {
         myChart.destroy();

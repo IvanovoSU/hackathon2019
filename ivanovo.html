@@ -27,19 +27,18 @@
 	<li><a href="javascript:void(0);"  onClick="drawdiag('ivanovo', this)">Психологические науки</a></li>
 </ul>
 </div>
-
-<div class="content">
-	<div class="home">
+<div class="home">
 <a href="index.html">Главная Страница</a>	
 </div>
+<div class="content">
 	<h3 align="center" id="name">Название диаграммы </h3>
-	<p id="trend">Потребность кадров через 5 лет:</p>
-	<p id="salary">Ожидаемая заработная плата:</p>
+	<p>Потребность кадров через 5 лет: <b id="trend"></b></p>
+	<p>Ожидаемая заработная плата: <b id="salary"></b></p>
 <script src="js/chart.js@2.8.0"></script>
 <canvas id="myChart"></canvas>
 <script src="js/diagramms.js"></script>
-	<p id="prof_cur">Необходимый преподовательский состав по текущему набору: </p>
-	<p id="prof_rec">Необходимый преподовательский состав по рекомендуемому набору:</p>
+	<p>Необходимый преподавательский состав по текущему набору: <b id="prof_cur"></b></p>
+	<p>Необходимый преподавательский состав по рекомендуемому набору: <b id="prof_rec"></b></p>
 </div>
 </body>
 <script type="text/javascript">drawdiag('ivanovo', document.getElementById('first'))</script>

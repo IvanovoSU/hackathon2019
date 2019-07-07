@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
     <meta charset="UTF-8">
     <title>Владимир</title>
@@ -9,27 +8,34 @@
 <body>
 <div>
 <ul class="list">
-<li><a href="">Экономика и управление</a></li>
-<li><a href="">Юриспруденция</a></li>
-<li><a href="">Образование и педагогические науки</a></li>
-<li><a href="">Техника и технологии строительства</a></li>
-<li><a href="">Информатика и вычислительная техника</a></li>
-<li><a href="">Машиностроение</a></li>
-<li><a href="">Техника и технологии наземного транспорта</a></li>
-<li><a href="">Психологические науки</a></li>
-<li><a href="">Социология и социальная работа</a></li>
-<li><a href="">Фотоника, приборостроение, оптические и биотехнические системы и технологии</a></li>
-<li><a href="">Средства массовой информации и информационно-библиотечное дело</a></li>
-<li><a href="">Управление в технических системах</a></li>
-<li><a href="">Техносферная безопасность и прородоблагоустройство</a></li>
-<li><a href="">Математика и механика</a></li>
-<li><a href="">Компьютерные и информационные науки</a></li>
-<li><a href="">Электроника, радиотехника и системы связи</a></li>015
-<li><a href="">Химические технологии</a></li>
-<li><a href="">Химия</a></li>
-<li><a href="">Изобразительное и прикладные виды искусств</a></li>
-<li><a href="">Культуроведение и социокультурные проекты</a></li>
+<li id="first"><a href="javascript:void(0);"  onClick="drawdiag('vladimir', this)">Экономика и управление</a></li>
+<li><a href="javascript:void(0);"  onClick="drawdiag('vladimir', this)">Юриспруденция</a></li>
+<li><a href="javascript:void(0);"  onClick="drawdiag('vladimir', this)">Образование и педагогические науки</a></li>
+<li><a href="javascript:void(0);"  onClick="drawdiag('vladimir', this)">Техника и технологии строительства</a></li>
+<li><a href="javascript:void(0);"  onClick="drawdiag('vladimir', this)">Информатика и вычислительная техника</a></li>
+<li><a href="javascript:void(0);"  onClick="drawdiag('vladimir', this)">Машиностроение</a></li>
+<li><a href="javascript:void(0);"  onClick="drawdiag('vladimir', this)">Техника и технологии наземного транспорта</a></li>
+<li><a href="javascript:void(0);"  onClick="drawdiag('vladimir', this)">Психологические науки</a></li>
+<li><a href="javascript:void(0);"  onClick="drawdiag('vladimir', this)">Социология и социальная работа</a></li>
+<li><a href="javascript:void(0);"  onClick="drawdiag('vladimir', this)">Фотоника, приборостроение, оптические и биотехнические системы и технологии</a></li>
+<li><a href="javascript:void(0);"  onClick="drawdiag('vladimir', this)">Средства массовой информации и информационно-библиотечное дело</a></li>
+<li><a href="javascript:void(0);"  onClick="drawdiag('vladimir', this)">Управление в технических системах</a></li>
+<li><a href="javascript:void(0);"  onClick="drawdiag('vladimir', this)">Математика и механика</a></li>
 </ul>
 </div>
+<div class="home">
+<a href="index.html">Главная Страница</a>	
+</div>
+<div class="content">
+	<h3 align="center" id="name">Название диаграммы </h3>
+	<p>Потребность кадров через 5 лет: <b id="trend"></b></p>
+	<p>Ожидаемая заработная плата: <b id="salary"></b></p>
+<script src="js/chart.js@2.8.0"></script>
+<canvas id="myChart"></canvas>
+<script src="js/diagramms.js"></script>
+	<p>Необходимый преподавательский состав по текущему набору: <b id="prof_cur"></b></p>
+	<p>Необходимый преподавательский состав по рекомендуемому набору: <b id="prof_rec"></b></p>
+</div>
 </body>
+<script type="text/javascript">drawdiag('vladimir', document.getElementById('first'))</script>
 </html> 

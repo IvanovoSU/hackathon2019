@@ -213,6 +213,7 @@ user-select: none;
     counter-reset: li;
     max-width: 35%;
 }    
+
 .list li {
     position: relative;
     border: 2px solid #337AB7;
@@ -271,24 +272,28 @@ user-select: none;
 .content{
 position:fixed;
 background:#EBF3FA;
-top:30px;
+top:70px;
 right:30px;
 width: 60%;
 padding: 20px;
 }
 
 #myChart {
-    max-width: 650px;
+    max-width: 525px;
 }
-
-.home a{
-color: white;
-text-decoration: none;
-user-select: none;
+.home {
 position: fixed;
 background: #1265ac;
 outline: none;
-padding: .7em 1.5em;
 right: 30px;
-top: 30px;
+top: 15px;
+padding: 10px;
+}
+
+.home a {
+font-size: 18px;
+font-weight: bold;
+color: white;
+text-decoration: none;
+user-select: none;
 }
