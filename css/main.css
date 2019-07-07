@@ -271,7 +271,24 @@ user-select: none;
 .content{
 position:fixed;
 background:#EBF3FA;
-top:50px;
-right:50px;
-width: 50%;
+top:30px;
+right:30px;
+width: 60%;
+padding: 20px;
+}
+
+#myChart {
+    max-width: 650px;
+}
+
+.home a{
+color: white;
+text-decoration: none;
+user-select: none;
+position: fixed;
+background: #1265ac;
+outline: none;
+padding: .7em 1.5em;
+right: 30px;
+top: 30px;
 }
