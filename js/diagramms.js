@@ -38,8 +38,8 @@ function drawdiag(region, elem){
                 label: 'Набор студентов',
                 data: [p1, p2],
                 backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(120, 250, 0, 0.2)'
+                    'rgba(255, 99, 132, 0.5)',
+                    'rgba(120, 250, 0, 0.5)'
 
                 ],
                 borderColor: [
